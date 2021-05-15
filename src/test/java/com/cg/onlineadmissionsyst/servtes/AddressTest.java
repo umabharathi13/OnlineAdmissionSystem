@@ -1,4 +1,4 @@
-package com.cg.onlineadmisssionsyst.test;
+package com.cg.onlineadmissionsyst.servtes;
 
 import static org.junit.jupiter.api.Assertions.*;
 

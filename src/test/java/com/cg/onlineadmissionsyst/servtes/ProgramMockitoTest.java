@@ -1,4 +1,4 @@
-package com.cg.onlineadmisssionsyst.test;
+package com.cg.onlineadmissionsyst.servtes;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -61,8 +61,8 @@ class ProgramMockitoTest {
 			Mockito.when(iprep.findById(103)).thenReturn(Optional.of(p));
 			assertEquals(103,p.getProgramId());
 		}
+		
 		@Test
-
 		void testDeleteApplicationById() {
 		Program p=new Program(102,"IOT","3 months","B.Tech","Internet Of things","PG","Onprocess");
 			Mockito.when(iprep.findById(102)).thenReturn(Optional.of(p));
