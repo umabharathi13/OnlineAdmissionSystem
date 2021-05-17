@@ -67,4 +67,9 @@ public class ProgramScheduledService implements IProgramScheduledService{
 		return pgrep.findByStartDate(startDate);
 	}
 
+	@Override
+	public List<ProgramScheduled> findByCollegeName(String collegeName) {
+		return pgrep.findBycollegeName(collegeName);
+	}
+
 }

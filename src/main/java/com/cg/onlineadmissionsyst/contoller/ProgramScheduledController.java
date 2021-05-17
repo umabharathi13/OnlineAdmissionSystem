@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cg.onlineadmissionsyst.module.Program;
 import com.cg.onlineadmissionsyst.module.ProgramScheduled;
 import com.cg.onlineadmissionsyst.exceptions.ProgramNotFoundException;
 import com.cg.onlineadmissionsyst.exceptions.ProgramScheduledNotFoundException;
@@ -66,4 +67,12 @@ public class ProgramScheduledController {
 		return pgser.findByStartDate(startDate);
 	}
 
+	@GetMapping("/programscheduled/colname/{clname}")
+	public List<ProgramScheduled> findBycollegeName(@PathVariable("clname") String collegeName)  {
+		if(pgser.findByCollegeName(collegeName)== null) {
+			throw new ProgramScheduledNotFoundException("Program scheduled not found for id:"+collegeName);
+		}
+		return pgser.findByCollegeName(collegeName);
+	}	
+	
 }

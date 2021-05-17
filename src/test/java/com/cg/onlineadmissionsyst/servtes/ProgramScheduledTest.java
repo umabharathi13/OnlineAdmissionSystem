@@ -3,6 +3,10 @@ package com.cg.onlineadmissionsyst.servtes;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import javax.transaction.Transactional;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -11,8 +15,12 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.cg.onlineadmissionsyst.module.Branch;
+import com.cg.onlineadmissionsyst.module.College;
+import com.cg.onlineadmissionsyst.module.Course;
 import com.cg.onlineadmissionsyst.module.Program;
 import com.cg.onlineadmissionsyst.module.ProgramScheduled;
+import com.cg.onlineadmissionsyst.module.University;
 import com.cg.onlineadmissionsyst.service.IProgramScheduledService;
 @SpringBootTest
 class ProgramScheduledTest {
@@ -31,16 +39,19 @@ class ProgramScheduledTest {
 	}
 
 	@Test
-	@Disabled
+	//@Disabled
 	void testaddProgramSchedule() {
-		ProgramScheduled psch=new ProgramScheduled(111,"2017-04-16","2017-12-28","Part time");
-		Program pgm = new Program(112,"ML","2 years","B.S.C","MAchined learning","12th","Completed");
-		psch.setProgram(pgm);
-		pgm.setProgramScheduled(psch);	
-		ProgramScheduled p = ipgmser.addProgramSchedule(psch);
-		System.out.println(p);
+		
+		Program pgm = new Program(114,"IOT","3 years","B.S","Internet","12th","Completed");
+		Branch b=new Branch(181,"EEE","Electricals");
+		Course course=new Course(6,"MBA","Master of business administration","PG");
+		University university=new University("Anna university",1001);
+		College col=new College(5001,"AIMS");	
+		ProgramScheduled psch=new ProgramScheduled(101,"2017-04-16","2017-12-28","Part time",pgm,course,b,university,col);
+		ProgramScheduled psh=ipgmser.addProgramSchedule(psch);
+		System.out.println(psh);
 		System.out.println("Added Successfully");
-		assertEquals(111, p.getScheduleId());
+		assertEquals(101, psh.getScheduleId());
 	}
 	
 	@Test
@@ -55,10 +66,10 @@ class ProgramScheduledTest {
 	@Test
 	@Disabled
     void testgetProgramScheduleById() {
-		ProgramScheduled view=ipgmser.getProgramScheduleById(112);
+		ProgramScheduled view=ipgmser.getProgramScheduleById(115);
 		System.out.println(view);
 		System.out.println("got");
-	    assertEquals(112,view.getScheduleId());
+	    assertEquals(115,view.getScheduleId());
     }
 
 	@Test
@@ -92,5 +103,15 @@ class ProgramScheduledTest {
 		for (ProgramScheduled p : view) {
 			System.out.println(p);
 		}
+	}
+	@Test
+	@Transactional
+	@Disabled
+	void testgetBycollegeName() {
+		List<ProgramScheduled> p=ipgmser.findByCollegeName("DRS");
+		for(ProgramScheduled p1:p) {
+			System.out.println(p1);
+		}
+		assertEquals(1,p.size());
 	}
 }

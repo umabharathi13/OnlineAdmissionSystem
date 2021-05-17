@@ -81,4 +81,9 @@ public class ProgramService implements IProgramService {
 		 return pgmrepo.deleteProgramByProgramName(programName);
 	}
 
+	@Override
+	public List<Program> findByCollegeName(String collegeName) {
+		return pgmrepo.findBycollegeName(collegeName);
+	}
+
 }

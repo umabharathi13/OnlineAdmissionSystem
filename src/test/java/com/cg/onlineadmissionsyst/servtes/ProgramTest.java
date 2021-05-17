@@ -12,6 +12,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.cg.onlineadmissionsyst.module.Course;
 import com.cg.onlineadmissionsyst.module.Program;
 import com.cg.onlineadmissionsyst.module.ProgramScheduled;
 import com.cg.onlineadmissionsyst.service.IProgramService;
@@ -65,6 +66,7 @@ class ProgramTest {
     }
 	
 	@Test
+	@Disabled
     void testdeleteProgramById() {
 		Program view=pgmser.deleteProgramById(120);
 		System.out.println(view);
@@ -111,4 +113,13 @@ class ProgramTest {
 	    assertEquals("iit",((Program) view).getProgramName());
 	}
 	
+	@Test
+	@Disabled
+	void testgetBycollegeName() {
+		List<Program> p=pgmser.findByCollegeName("DRR");
+		for(Program p1:p) {
+			System.out.println(p1);
+		}
+		assertEquals(1,p.size());
+	}
 }

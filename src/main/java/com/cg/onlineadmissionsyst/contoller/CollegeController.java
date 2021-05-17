@@ -27,6 +27,4 @@ public class CollegeController {
 	public List<College> findAllCourse() {
 		return coser.findAll();
 	}
-	
-
 }

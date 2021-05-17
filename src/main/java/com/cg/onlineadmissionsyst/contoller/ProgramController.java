@@ -16,13 +16,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 
+import com.cg.onlineadmissionsyst.module.Course;
 import com.cg.onlineadmissionsyst.module.Program;
+import com.cg.onlineadmissionsyst.exceptions.CourseNotFoundException;
 import com.cg.onlineadmissionsyst.exceptions.ProgramNotFoundException;
 import com.cg.onlineadmissionsyst.exceptions.ProgramScheduledNotFoundException;
 import com.cg.onlineadmissionsyst.service.IProgramService;
-
-
-
 
 
 @RestController
@@ -89,5 +88,13 @@ public class ProgramController {
 		}
 		return pgmService.deleteProgramByProgramName(programName);
 	}
+	
+	@GetMapping("/program/colname/{clname}")
+	public List<Program> findBycollegeName(@PathVariable("clname") String collegeName)  {
+		if(pgmService.findByCollegeName(collegeName)== null) {
+			throw new ProgramNotFoundException("Program not found for id:"+collegeName);
+		}
+		return pgmService.findByCollegeName(collegeName);
+	}	
 	
 }

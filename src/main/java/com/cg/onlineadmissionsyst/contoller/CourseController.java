@@ -101,8 +101,4 @@ public class CourseController {
 		}
 		return crser.findBycollegeName(collegeName);
 	}
-	
-	
-	
-	
 }

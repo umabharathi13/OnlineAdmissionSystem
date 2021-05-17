@@ -23,6 +23,7 @@ public class Program {
 	
 	@OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
 	private ProgramScheduled programScheduled;
+	
 	public Program() {}
 	
 	public Program(int programId, String programName, String programDuration, String degreeOffered,

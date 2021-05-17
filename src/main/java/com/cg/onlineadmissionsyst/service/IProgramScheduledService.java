@@ -15,10 +15,7 @@ public interface IProgramScheduledService {
 	ProgramScheduled getProgramScheduleById(int scheduleId);
     ProgramScheduled deleteProgramScheduleById(int scheduleId);
     ProgramScheduled updateProgramSchedule(int scheduledId,ProgramScheduled programSchedule);
-    List<ProgramScheduled> findByStartDate(String startDate);	
- 
-    
-   
-	//public  ArrayList<ProgramScheduled>getProgramScheduleByCollegeName(String collegeName);
+    List<ProgramScheduled> findByStartDate(String startDate);
+	List<ProgramScheduled> findByCollegeName(String collegeName);
 
 }

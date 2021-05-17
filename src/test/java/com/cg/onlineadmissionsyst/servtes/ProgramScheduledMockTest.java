@@ -89,4 +89,5 @@ class ProgramScheduledMockTest {
 		List<ProgramScheduled> pg = pss.findByStartDate("2017-04-16");
 		assertEquals(1,pg.size());			
 	}	
+	
 }
