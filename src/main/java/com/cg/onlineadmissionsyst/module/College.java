@@ -9,6 +9,7 @@ import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
 public class College {
@@ -21,9 +22,15 @@ public class College {
 	@JoinColumn(name="college_id")  
 	private List<Course> course = new ArrayList<>();
 	
-	//private Address collegeAddress;	
+	@OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+	@JoinColumn(name="addr_id") 
+	private Address collegeAddress;	
+	
     //private ArrayList<Program> programList;
-	//private University universityName;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="c_id")
+	private University university;
 	
 	public College(){}
 	public College(int collegeRegId, String collegeName, List<Course> course) {
@@ -31,6 +38,15 @@ public class College {
 		this.collegeRegId = collegeRegId;
 		this.collegeName = collegeName;
 		this.course = course;
+	}
+	public College(int collegeRegId, String collegeName, List<Course> course, Address collegeAddress,
+			University university) {
+		super();
+		this.collegeRegId = collegeRegId;
+		this.collegeName = collegeName;
+		this.course = course;
+		this.collegeAddress = collegeAddress;
+		this.university = university;
 	}
 	public int getCollegeRegId() {
 		return collegeRegId;
@@ -50,10 +66,25 @@ public class College {
 	public void setCourse(List<Course> course) {
 		this.course = course;
 	}
+	public University getUniversity() {
+		return university;
+	}
+	public void setUniversity(University university) {
+		this.university = university;
+	}
+	public Address getCollegeAddress() {
+		return collegeAddress;
+	}
+	public void setCollegeAddress(Address collegeAddress) {
+		this.collegeAddress = collegeAddress;
+	}
 	@Override
 	public String toString() {
-		return "College [collegeRegId=" + collegeRegId + ", collegeName=" + collegeName + ", course=" + course + "]";
+		return "College [collegeRegId=" + collegeRegId + ", collegeName=" + collegeName + ", course=" + course
+				+ ", collegeAddress=" + collegeAddress + ", university=" + university + "]";
 	}
+	
+
 	
 	
 

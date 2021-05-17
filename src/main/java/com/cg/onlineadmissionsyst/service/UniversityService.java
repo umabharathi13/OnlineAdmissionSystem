@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.cg.onlineadmissionsyst.module.Course;
 import com.cg.onlineadmissionsyst.module.University;
 import com.cg.onlineadmissionsyst.repository.IUniversityRepository;
 @Service
@@ -18,7 +19,7 @@ public class UniversityService implements IUniversityService {
 		return unirep.save(university);
 	}
 	@Override
-	public University deleteByUniversityId(int universityId) {
+	public University deleteUniversityById(int universityId) {
 		Optional<University> uo=unirep.findById(universityId);
 		if(!uo.isPresent()) {
 		return null;
@@ -45,10 +46,16 @@ public class UniversityService implements IUniversityService {
 		if(!u.isPresent()) {
 			return null;
 		}
-		
 		university.setName(university.getName());
-		
 		return unirep.save(university);
+	}
+	@Override
+	public List<University> findBycollegeName(String collegeName) {
+		List<University> c=unirep.findBycollegeName(collegeName);
+	     if(c.isEmpty()) {
+	    	 return null;
+	     }
+	     return unirep.findBycollegeName(collegeName);
 	}
 }
 	

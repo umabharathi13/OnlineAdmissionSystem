@@ -94,13 +94,15 @@ public class CourseController {
 		return crser.updateC(courseId,course);
 	}
 	
-	@GetMapping("/college/colname/{clname}")
+	@GetMapping("/course/colname/{clname}")
 	public List<Course> findBycollegeName(@PathVariable("clname") String collegeName)  {
 		if(crser.findBycollegeName(collegeName)== null) {
-			throw new CourseNotFoundException("Course not found for id:"+collegeName);
+			throw new CourseNotFoundException("Course not found for collegename:"+collegeName);
 		}
 		return crser.findBycollegeName(collegeName);
 	}
+	
+	
 	
 	
 	

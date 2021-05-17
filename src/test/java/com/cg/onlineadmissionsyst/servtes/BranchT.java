@@ -25,18 +25,18 @@ class BranchT {
 		for(Branch b1:b) {
 			System.out.println(b1);
 		}
-		assertEquals(14,b.size());
+		assertEquals(5,b.size());
 	}
 	@Test
-	@Disabled
+	//@Disabled
 	void testFindBranchById() {
-		Branch b=brser.getByBId(106);
-		assertEquals("PHY",b.getBranchName());
+		Branch b=brser.getByBId(109);
+		assertEquals("BOT",b.getBranchName());
 	}
 	@Test
 	@Disabled
 	void testCreateBranch() {
-		Branch branch=new Branch(113,"Info Tech","IT");
+		Branch branch=new Branch(109,"Info Tech","IT");
 		Branch b = brser.save(branch);
 		assertEquals(113,b.getBranchId());
 	}
@@ -59,8 +59,8 @@ class BranchT {
 	@Test
 	@Disabled
 	void getdetByNameTest() {
-		Branch b=brser.findByName("EEE");
-		assertEquals("EEE",b.getBranchName());
+		Branch b=brser.findByName("BOT");
+		assertEquals("BOT",b.getBranchName());
 	}
 	@Test
     @Disabled

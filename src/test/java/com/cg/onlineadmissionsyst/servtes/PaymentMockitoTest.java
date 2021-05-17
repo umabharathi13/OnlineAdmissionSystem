@@ -37,7 +37,7 @@ class PaymentMockitoTest {
 	
 	
 	@Test
-//	@Disabled
+	@Disabled
 	void testAddPayment() {
 		LocalDate app = LocalDate.of(2021, 05, 10);
 		Payment paym = new Payment(106, "matthew@gmail.com", 4000.00, "Paid", app, "Received");
@@ -48,7 +48,7 @@ class PaymentMockitoTest {
 	}
 	
 	@Test
-//	@Disabled
+	@Disabled
 	void testviewAllPaymentDetails() {
 		LocalDate app = LocalDate.of(2021, 05, 10);
 		Payment paym = new Payment(106, "matthew@gmail.com", 4000.00, "Paid", app, "Received");

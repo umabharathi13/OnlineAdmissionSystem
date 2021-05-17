@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cg.onlineadmissionsyst.module.Course;
 import com.cg.onlineadmissionsyst.module.University;
+import com.cg.onlineadmissionsyst.exceptions.CourseNotFoundException;
 import com.cg.onlineadmissionsyst.exceptions.UniversityNotFoundException;
 import com.cg.onlineadmissionsyst.service.IUniversityService;
 
@@ -33,11 +35,11 @@ public class UniversityController {
 	}
 	
 	@DeleteMapping("/university/did/{id}")
-	public University deleteByUniversityId(@PathVariable("id") int universityId) {
-		//if(unser.deleteUniversityById(universityId)==null) {
-		//throw new UniversityNotFoundException("U can't delete because University not found for id:" +universityId);
-	//}
-		return unser.deleteByUniversityId(universityId);
+	public University deleteUniversityId(@PathVariable("id") int universityId) {
+		if(unser.deleteUniversityById(universityId)==null) {
+		throw new UniversityNotFoundException("U can't delete because University not found for id:" +universityId);
+	}
+		return unser.deleteUniversityById(universityId);
 	}
 	@GetMapping("/university/id/{id}")
 	public University getUniversityById(@PathVariable("id") int universityId) {
@@ -49,6 +51,14 @@ public class UniversityController {
 	@PatchMapping("/university/{id}") 
 	public University update(@PathVariable("id") int id, @RequestBody University university) {
 		return unser.update(university);
+	}
+	
+	@GetMapping("/course/collegename/{c}")
+	public List<University> findBycollegeName(@PathVariable("c") String collegeName)  {
+		if(unser.findBycollegeName(collegeName)== null) {
+			throw new UniversityNotFoundException("University not found for collegename:"+collegeName);
+		}
+		return unser.findBycollegeName(collegeName);
 	}
 	
 	
