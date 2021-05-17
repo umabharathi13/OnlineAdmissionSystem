@@ -49,7 +49,7 @@ class PaymentTest {
  }
 	
 	@Test
-//	@Disabled
+    @Disabled
 	void testviewAllPaymentDetails() {
 		List<Payment>view=payser.viewAllPaymentDetails();
 		for(Payment a : view) {

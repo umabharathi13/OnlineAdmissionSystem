@@ -39,7 +39,7 @@ public class ProgramScheduledService implements IProgramScheduledService{
 	public ProgramScheduled deleteProgramScheduleById(int scheduleId) {
 		Optional<ProgramScheduled> psc=pgrep.findById(scheduleId);
 		if(!psc.isPresent()) {
-			return psc.orElseThrow();
+			return null;
 		}
 		pgrep.deleteById(scheduleId);
 		return psc.get();

@@ -13,4 +13,16 @@ public interface ICollegeService {
 
 	List<College> findAll();
 
+	College getByCoId(int collegeId);
+
+	College deleteByCollegeId(int collegeId);
+
+	College findBycollegeName(String collegeName);
+
+	void deleteCollegeByCollegeName(String collegeName);
+
+	College updateC(int collegeId, College college);
+
+	//College findBycouName(String courseName);
+
 }

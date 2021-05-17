@@ -10,13 +10,15 @@ import com.cg.onlineadmissionsyst.module.University;
 public interface IUniversityService {
 	University save(University University);
 
-	University deleteByUniversityId(int universityId);
+	University deleteUniversityById(int universityId);
 
 	University getByUniversityId(int universityId);
 
 	List<University> findAll();
 
 	University update(University university);
+
+	List<University> findBycollegeName(String collegeName);
 
 	
 }

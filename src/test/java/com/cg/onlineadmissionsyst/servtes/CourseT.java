@@ -37,19 +37,19 @@ class CourseT {
 		assertEquals(6,course.getCourseId());
 	}
 	@Test
-	@Disabled
+	//@Disabled
 	void testFindcourseById() {
 		Course c=crser.getByCId(1);
 		assertEquals("BE",c.getCourseName());
 	}
 	@Test
-	@Disabled
+	//@Disabled
 	void testfindAll() {
 		List<Course> c= crser.findAll();
 		for(Course c1:c) {
 			System.out.println(c1);
 		}
-		assertEquals(6,c.size());
+		assertEquals(2,c.size());
 	}
 	@Test
 	@Disabled
@@ -69,19 +69,19 @@ class CourseT {
 		assertEquals("M-TECH",c1.getCourseName());
 	}
 	@Test
-	@Disabled
+	//@Disabled
 	void getdetByNameTest() {
 		Course c=crser.findByName("BE");
 		assertEquals(1,c.getCourseId());
 	}
 	@Test
-	@Disabled
+	//@Disabled
 	void getdetByEligiTest() {
-		List<Course> c=crser.findByEligibility("PG");
+		List<Course> c=crser.findByEligibility("UG");
 		for(Course c1:c) {
 			System.out.println(c1);
 		}
-		assertEquals(1,c.size());
+		assertEquals(2,c.size());
 	}
 	@Test
     @Disabled
@@ -90,7 +90,7 @@ class CourseT {
 		System.out.println("deleted");
 		}
 	@Test
-	//@Disabled
+	@Disabled
 	void getdetBycollegeNameTest() {
 		List<Course> c=crser.findBycollegeName("ACGCET");
 		for(Course c1:c) {

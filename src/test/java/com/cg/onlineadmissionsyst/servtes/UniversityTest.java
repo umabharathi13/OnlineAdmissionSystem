@@ -2,12 +2,19 @@ package com.cg.onlineadmissionsyst.servtes;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.cg.onlineadmissionsyst.module.Address;
+import com.cg.onlineadmissionsyst.module.Branch;
+import com.cg.onlineadmissionsyst.module.College;
+import com.cg.onlineadmissionsyst.module.Course;
+import com.cg.onlineadmissionsyst.module.Program;
 import com.cg.onlineadmissionsyst.module.University;
 import com.cg.onlineadmissionsyst.service.IUniversityService;
 
@@ -35,9 +42,22 @@ public class UniversityTest {
 		@Test
 		@Disabled
 		void testCreateUniversity() {
-		University university=new University("Jntu",101);
-			University u = uniser.save(university);
-			assertEquals(101,u.getUniversityId());
+            //Program pgm = new Program(120,"iit","7 months","B.EE","Intelligence it","PG","Onprocess");
+			//Address a=new Address(6,"salem","indian","salem","opp busstand","tamilnadu","635108");
+			Branch b=new Branch(117,"IT","Information Technology");
+			Branch b1=new Branch(118,"HRM","Human Resource Management");
+			List<Branch> branch=Stream.of(b,b1).collect(Collectors.toList());
+			Course course=new Course(10,"MBA","Master Of Business and Administration","PG",branch);
+			Branch b2=new Branch(119,"IT","Information Technology");
+			Branch b3=new Branch(120,"HRM","Human Resource Management");
+			List<Branch> branch1=Stream.of(b2,b3).collect(Collectors.toList());
+			Course course1=new Course(1,"M-TECH","Master Of Technology","PG",branch1);
+			List<Course> c1=Stream.of(course,course1).collect(Collectors.toList());
+			Address a=new Address(5,"chennai","indian","chennai","opp busstand","tamilnadu","635109");
+			College c=new College(99,"GCET",c1);
+		    University u= new University(101,"Anna University",a,c);
+			University u1 = uniser.save(u);
+			assertEquals(101,u1.getUniversityId());
 		}
 		@Test
 		@Disabled
@@ -52,8 +72,14 @@ public class UniversityTest {
 		@Test
 		@Disabled
 		void deleteUniversityTest() {
-			uniser.deleteByUniversityId(105);
+			uniser.deleteUniversityById(105);
 			System.out.println("deleted");
+		}
+		@Test
+		@Disabled
+		void findbycolnametest() {
+			List<University> u=uniser.findBycollegeName("GCET");
+			System.out.println(u);
 		}
 		
 

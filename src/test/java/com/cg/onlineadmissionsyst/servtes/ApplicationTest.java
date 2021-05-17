@@ -56,7 +56,7 @@ class ApplicationTest {
 		assertEquals("Monica",a.getApplicantFullName());	
 }
 	@Test
-//	@Disabled
+	@Disabled
 	void testviewapplication() {
 		List<Application>view=appser.viewAllApplicationDetails();
 		for(Application a : view) {

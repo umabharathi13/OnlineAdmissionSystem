@@ -42,8 +42,4 @@ public class Branch {
 	}
 }
 	
-//@ManyToOne(fetch = FetchType.EAGER)
-// @JoinColumn(name = "course_id")
-	//@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-	
 	

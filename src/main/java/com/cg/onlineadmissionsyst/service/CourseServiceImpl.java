@@ -95,6 +95,10 @@ public class CourseServiceImpl implements ICourseService {
 
 	@Override
 	public List<Course> findBycollegeName(String collegeName) {
+	     List<Course> c=crrep.findBycollegeName(collegeName);
+	     if(c.isEmpty()) {
+	    	 return null;
+	     }
 	     return crrep.findBycollegeName(collegeName);
 	}
 	

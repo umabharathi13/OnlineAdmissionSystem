@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.cg.onlineadmissionsyst.servtes.BranchT" tests="7" skipped="6" failures="0" errors="0" timestamp="2021-05-17T07:55:42" hostname="LAPTOP-F30D8FKO" time="0.016">
+  <properties/>
+  <testcase name="deleteBranchNameTest()" classname="com.cg.onlineadmissionsyst.servtes.BranchT" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="getdetByNameTest()" classname="com.cg.onlineadmissionsyst.servtes.BranchT" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testFindBranchById()" classname="com.cg.onlineadmissionsyst.servtes.BranchT" time="0.01"/>
+  <testcase name="updateBranchTest()" classname="com.cg.onlineadmissionsyst.servtes.BranchT" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testfindAll()" classname="com.cg.onlineadmissionsyst.servtes.BranchT" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="deleteBranchIdTest()" classname="com.cg.onlineadmissionsyst.servtes.BranchT" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testCreateBranch()" classname="com.cg.onlineadmissionsyst.servtes.BranchT" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[2021-05-17 13:25:42.092  INFO 25936 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.cg.onlineadmissionsyst.servtes.BranchT], using SpringBootContextLoader
+2021-05-17 13:25:42.093  INFO 25936 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.cg.onlineadmissionsyst.servtes.BranchT]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-05-17 13:25:42.093  INFO 25936 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.cg.onlineadmissionsyst.servtes.BranchT]: BranchT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-05-17 13:25:42.095  INFO 25936 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.cg.onlineadmissionsyst.OnlineadmissionsystApplication for test class com.cg.onlineadmissionsyst.servtes.BranchT
+2021-05-17 13:25:42.098  INFO 25936 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-05-17 13:25:42.099  INFO 25936 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@25acb272, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@62ea1da0, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@6f5d6100, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1a2d4c9b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5ad2428e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@68675369, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6cb67a04, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1c0faa9d, org.springframework.test.context.event.EventPublishingTestExecutionListener@54014da0, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@62fa052, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@59968cc9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@382c9e24, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@661ea8cc, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@1dc8a96d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@70d59ed9]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

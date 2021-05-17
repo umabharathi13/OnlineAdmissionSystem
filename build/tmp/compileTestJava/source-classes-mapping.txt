@@ -1,0 +1,42 @@
+com/cg/onlineadmissionsyst/servtes/BranchT.java
+ com.cg.onlineadmissionsyst.servtes.BranchT
+com/cg/onlineadmissionsyst/servtes/PaymentMockitoTest.java
+ com.cg.onlineadmissionsyst.servtes.PaymentMockitoTest
+com/cg/onlineadmissionsyst/servtes/ProgramTest.java
+ com.cg.onlineadmissionsyst.servtes.ProgramTest
+com/cg/onlineadmissionsyst/servtes/AdmissionT.java
+ com.cg.onlineadmissionsyst.servtes.AdmissionT
+com/cg/onlineadmissionsyst/OnlineadmissionsystApplicationTests.java
+ com.cg.onlineadmissionsyst.OnlineadmissionsystApplicationTests
+com/cg/onlineadmissionsyst/servtes/AdmissionMockito.java
+ com.cg.onlineadmissionsyst.servtes.AdmissionMockito
+com/cg/onlineadmissionsyst/servtes/ApplicationMockitoTest.java
+ com.cg.onlineadmissionsyst.servtes.ApplicationMockitoTest
+com/cg/onlineadmissionsyst/servtes/CourseMockito.java
+ com.cg.onlineadmissionsyst.servtes.CourseMockito
+com/cg/onlineadmissionsyst/servtes/AddressMockito.java
+ com.cg.onlineadmissionsyst.servtes.AddressMockito
+com/cg/onlineadmissionsyst/servtes/DocumentT.java
+ com.cg.onlineadmissionsyst.servtes.DocumentT
+com/cg/onlineadmissionsyst/servtes/DocumentMockito.java
+ com.cg.onlineadmissionsyst.servtes.DocumentMockito
+com/cg/onlineadmissionsyst/servtes/ApplicationTest.java
+ com.cg.onlineadmissionsyst.servtes.ApplicationTest
+com/cg/onlineadmissionsyst/servtes/PaymentTest.java
+ com.cg.onlineadmissionsyst.servtes.PaymentTest
+com/cg/onlineadmissionsyst/servtes/AddressT.java
+ com.cg.onlineadmissionsyst.servtes.AddressT
+com/cg/onlineadmissionsyst/servtes/ProgramScheduledTest.java
+ com.cg.onlineadmissionsyst.servtes.ProgramScheduledTest
+com/cg/onlineadmissionsyst/servtes/ProgramScheduledMockTest.java
+ com.cg.onlineadmissionsyst.servtes.ProgramScheduledMockTest
+com/cg/onlineadmissionsyst/servtes/ProgramMockitoTest.java
+ com.cg.onlineadmissionsyst.servtes.ProgramMockitoTest
+com/cg/onlineadmissionsyst/servtes/BranchMockito.java
+ com.cg.onlineadmissionsyst.servtes.BranchMockito
+com/cg/onlineadmissionsyst/servtes/UniversityMockito.java
+ com.cg.onlineadmissionsyst.servtes.UniversityMockito
+com/cg/onlineadmissionsyst/servtes/UniversityTest.java
+ com.cg.onlineadmissionsyst.servtes.UniversityTest
+com/cg/onlineadmissionsyst/servtes/CourseT.java
+ com.cg.onlineadmissionsyst.servtes.CourseT
